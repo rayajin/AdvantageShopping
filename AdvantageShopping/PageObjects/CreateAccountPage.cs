@@ -20,7 +20,7 @@ namespace AdvantageShopping.PageObjects
         private IWebElement TxtboxPassword => _driver.FindElement(By.Name("passwordRegisterPage"));
         private IWebElement TxtboxConfirmPassword => _driver.FindElement(By.Name("confirm_passwordRegisterPage"));
         private IWebElement TxtboxFirstName => _driver.FindElement(By.Name("first_nameRegisterPage"));
-        private IReadOnlyCollection<IWebElement> TxtInputErrorMessages => _driver.FindElements(By.XPath("//label[@data-ng-click='labelClicked()' and @class='invalid']"));
+        private IReadOnlyCollection<IWebElement> TxtInputErrorMessages => _driver.FindElements(By.XPath("//label[@data-ng-click='labelClicked()'][contains(@class,'invalid')]"));
         private IWebElement BtnCreateNewAccount => _driver.FindElement(By.XPath("//a[contains(text(), 'CREATE NEW ACCOUNT')]"));
 
         #endregion
